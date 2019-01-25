@@ -23,12 +23,23 @@
 }
 
 .collapseCard__header {
+    position: relative;
     padding: 10px;
     cursor: pointer;
     background-color: #e3e3e3;
 }
 .collapseCard__header:hover {
     opacity: 0.8;
+}
+
+.collapseCard__header:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .collapseCard__header .collapseCard__wrap {
@@ -48,6 +59,7 @@
 .collapseCard__title {
   font-size: 16px;
   font-weight: 600;
+  z-index: 2;
 }
 
 .collapseCard__body {

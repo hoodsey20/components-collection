@@ -41,4 +41,4 @@ async function fetchComponent(endpoint) {
 console.log('container2', container);
 
 fetchComponent('components/counter/');
-fetchComponent('components/collapseCard/');
+// fetchComponent('components/collapseCard/');
