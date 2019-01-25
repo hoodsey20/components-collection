@@ -1,0 +1,38 @@
+.counter {
+  display: inline-block;
+  font-size: 0;
+}
+
+.counter__button {
+  border: 0;
+  vertical-align: top;
+  width: 37px;
+  height: 37px;
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2f80ed;
+  border-radius: 0;
+}
+
+.counter__input {
+  display: inline-block;
+  vertical-align: top;
+  width: 55px;
+  height: 37px;
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 37px;
+  text-align: center;
+  background-color: #E0E0E0;
+  color: #333;
+}
+
+.counter__input::-webkit-inner-spin-button,
+.counter__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

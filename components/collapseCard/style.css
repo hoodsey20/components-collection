@@ -1,0 +1,64 @@
+.collapseCard.isClosed .collapseCard__body {
+    position: absolute;
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+}
+
+.collapseCard.isClosed .collapseCard__up {
+    display: none;
+  }
+
+.collapseCard.isOpen .collapseCard__down {
+    display: none;
+}
+
+.collapseCard__header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e3e3e3;
+}
+.collapseCard__header:hover {
+    opacity: 0.8;
+}
+
+.collapseCard__header .collapseCard__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-right: 10px;
+}
+.collapseCard__header .collapseCard__up {
+    top: 5px;
+}
+.collapseCard__header .collapseCard__down {
+    top: -3px;
+}
+
+.collapseCard__title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.collapseCard__body {
+  padding: 10px 0;
+}
+
+.collapseCard__text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.collapseCard__text p {
+    margin-top: 0;
+}
