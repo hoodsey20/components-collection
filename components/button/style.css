@@ -1,0 +1,70 @@
+.button[disabled]:hover,
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 3px 3px;
+    padding: 16px 30px;
+    border: 4px solid #1e1bc9;
+  
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+  
+    background-color: transparent;
+    color: #1e1bc9;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #1e1bc9;
+}
+
+.button:focus {
+    color: #fff;
+    background-color: #1e1bc9;
+    box-shadow: 0 0 0 2px #5596eb;   
+}
+
+.button:active {
+    color: #1e1bc9;
+    background-color: transparent;
+    border-color: #5596eb;
+}
+
+.button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.button--loading[disabled] {
+    color: transparent !important;
+    opacity: 0.9;
+    background-color: #fff;
+    animation: loadingAnimation 5s linear infinite;
+}
+
+.button--loading[disabled]:before {
+    content: 'Loading...';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1e1bc9;
+}
+
+@keyframes loadingAnimation {
+    0% { filter: hue-rotate(0) }
+    50% { filter: hue-rotate(270deg) }
+    100% { filter: hue-rotate(0) }
+}
+
+

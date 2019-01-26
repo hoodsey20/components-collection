@@ -15,6 +15,10 @@ function menuItemClickHandler(evt) {
 
 function addMenuItem(name) {
     const item = document.createElement('LI');
+    const currentRout = location.hash;
+    if (currentRout && name === currentRout.substr(1)) {
+        item.classList.add('active');
+    }
     item.innerText = name;
     item.addEventListener('click', menuItemClickHandler);
     menu.appendChild(item);
@@ -31,7 +35,6 @@ function getComponentsList() {
         .catch((error) => alert(error.message))
 }
 
-getComponentsList();
 
 
 async function fetchComponent(name) {
@@ -62,18 +65,17 @@ async function fetchComponent(name) {
     const componentScript = await fetch(path.JS);
     
     if (componentScript.statusText !== 'Not Found' && !scriptsLinks.includes(`${location.origin}/${path.JS}`)) {
-        console.log(`${location.origin}/${path.JS}`)
-        console.log('not found js')
         const script = document.createElement('script');
         script.src = path.JS;
         document.body.appendChild(script);
     }
-}
+} 
 
 document.addEventListener('DOMContentLoaded', function() {
     const currentRout = location.hash;
     if (currentRout) {
         fetchComponent(currentRout.substr(1));
     }
+    getComponentsList();
 })
  
