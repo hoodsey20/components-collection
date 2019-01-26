@@ -1,6 +1,25 @@
 const container = document.querySelector('.component-container');
+const menu = document.querySelector('.app__menu');
 
-// todo: async fetch component
+function addMenuItem(name) {
+    const item = document.createElement('LI');
+    item.innerText = name;
+    menu.appendChild(item);
+}
+
+function getComponentsList() {
+    fetch('components.json')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(element => {
+                addMenuItem(element);
+            });
+        })
+        .catch((error) => alert(error.message))
+}
+
+getComponentsList();
+
 
 async function fetchComponent(endpoint) {
     const path = {
@@ -34,8 +53,6 @@ async function fetchComponent(endpoint) {
         script.src = path.JS;
         document.body.appendChild(script);
     }
-    
-	
 }
 
 console.log('container2', container);
